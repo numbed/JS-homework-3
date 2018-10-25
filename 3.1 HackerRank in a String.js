@@ -8,7 +8,6 @@ function run(){
 		var ssIndex = 0;
 		for (var i=0; i<s.length; i++){
 			if (s[i] == ss[ssIndex]){
-				console.log(s[i] + ss[ssIndex]);
 				ssIndex += 1;
 			}
 		}
