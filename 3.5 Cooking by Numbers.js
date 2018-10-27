@@ -21,3 +21,45 @@ The output should be printed on the console.
 
 
 */
+
+function main() {
+
+	function cook(n, opr) {
+		switch (opr){
+			case "chop":
+			n = n/2;
+			break;
+
+			case "dice":
+			n = Math.sqrt(n);
+			break;
+
+			case "spice":
+			n = n + 1;
+			break;
+
+			case "bake":
+			n = n*3;
+			break;
+
+			case "fillet":
+			n = n/2;
+		}
+		return n;
+	}
+
+
+
+	var n = parseInt(prompt("Enter number: ",100));
+	var operations = ["dice", "bake", "chop", "spice", "fillet"];
+//	for (i = 0; i < 5; i++) {
+//		var x = prompt("Enter operation:");
+//		operations.push(x);
+//	}
+
+	for (k in operations) {
+		console.log(n + " -> " + operations[k] + " -> " + (n = cook(n,operations[k])));
+	}
+  console.log(n);
+}
+main();
