@@ -31,7 +31,7 @@ function main() {
 		switch(a) {
 
 			case "city":
-				s = 40;
+				s = 50;
 				break;
 
 			case "residential":
