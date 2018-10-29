@@ -16,9 +16,9 @@ See the examples for more info.
 
 function main() {
 
-	var pointA = prompt("Enter point A coodinates (x,y):","0,3").split(",");
-	var pointB = prompt("Enter point B coodinates (x,y):","1,0").split(",");
-	var pointC = prompt("Enter point C coodinates (x,y):","-2,0").split(",");
+	var pointA = prompt("Enter point A coodinates (x,y):","5,1").split(",");
+	var pointB = prompt("Enter point B coodinates (x,y):","1,1").split(",");
+	var pointC = prompt("Enter point C coodinates (x,y):","5,4").split(",");
 
 	var countDistance = function (a,b) {
 		var ax = parseFloat(a[0]);
@@ -30,16 +30,15 @@ function main() {
 			Math.pow((bx-ax),2)  +  Math.pow((by-ay),2)
 		);
 
-		return console.log(dist);
-
-
-
+		return dist;
 	}
 
-	countDistance(pointA,pointB);
-	countDistance(pointB,pointC);
-	countDistance(pointA,pointC);
-
+	var pointsDistArr = [];
+	pointsDistArr.push(countDistance(pointA,pointB));
+	pointsDistArr.push(countDistance(pointB,pointC));
+	pointsDistArr.push(countDistance(pointA,pointC));
+	pointsDistArr.sort(function(a, b){return a-b});
+	console.log(pointsDistArr[0] + pointsDistArr[1]);
 
 }
 main();
