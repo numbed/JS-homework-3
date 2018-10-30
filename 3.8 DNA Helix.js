@@ -30,7 +30,7 @@ Input			Output
 
 function main(){
 
-var helixSize = parseInt(prompt("Enter length of the helix:"));
+  var helixSize = parseInt(prompt("Enter length of the helix:"));
 
 
 }
