@@ -28,9 +28,27 @@ Input			Output
 
 */
 
-function main(){
 
-  var helixSize = parseInt(prompt("Enter length of the helix:"));
+function main() {
+
+	var helixSize = parseInt(prompt("Enter length of the helix:", 10));
+	console.log(helixSize);
+	var dna = "ATCGTTAGGG";
+	var x = 0;
+
+	for (var i = 0; i < helixSize; i++) {
+		if (i % 4 == 0) {
+			console.log("**" + dna.slice(x % 10, x % 10 + 1) + "**");
+		} else if (i % 4 == 1) {
+			console.log("*" + dna.slice(x % 10) + "--" + dna.slice(x % 10 + 1) + "*");
+		} else if (i % 4 == 2) {
+			console.log(dna.slice(x % 10) + "----" + dna.slice(x % 10 + 1));
+		} else if (i % 4 == 3) {
+			console.log("*" + dna.slice(x % 10) + "--" + dna.slice(x % 10 + 1) + "*");
+		}
+		x += 2;
+		//		console.log(i + " -> " + x + " -> " + x%10);
+	}
 
 
 }

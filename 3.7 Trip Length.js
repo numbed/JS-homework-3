@@ -14,6 +14,8 @@ See the examples for more info.
 */
 
 
+
+
 function main() {
 
 	var pointA = prompt("Enter point A coodinates (x,y):","5,1").split(",");
