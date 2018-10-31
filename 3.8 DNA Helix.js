@@ -38,13 +38,13 @@ function main() {
 
 	for (var i = 0; i < helixSize; i++) {
 		if (i % 4 == 0) {
-			console.log("**" + dna.slice(x % 10, x % 10 + 1) + "**");
+			console.log("**" + dna.substr(x % 10, 2) + "**");
 		} else if (i % 4 == 1) {
-			console.log("*" + dna.slice(x % 10) + "--" + dna.slice(x % 10 + 1) + "*");
+			console.log("*" + dna.substr(x % 10,1) + "--" + dna.substr(x % 10 + 1,1) + "*");
 		} else if (i % 4 == 2) {
-			console.log(dna.slice(x % 10) + "----" + dna.slice(x % 10 + 1));
+			console.log(dna.substr(x % 10,1) + "----" + dna.substr(x % 10 + 1,1));
 		} else if (i % 4 == 3) {
-			console.log("*" + dna.slice(x % 10) + "--" + dna.slice(x % 10 + 1) + "*");
+			console.log("*" + dna.substr(x % 10,1) + "--" + dna.substr(x % 10 + 1,1) + "*");
 		}
 		x += 2;
 		//		console.log(i + " -> " + x + " -> " + x%10);
